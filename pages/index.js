@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout'
 import { getSortedPostsData } from "../lib/posts"
 import utilStyles from '../styles/utils.module.css'
 
+// Static Generation with data
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -11,6 +12,16 @@ export async function getStaticProps() {
     }
   }
 }
+
+// Server Side Rendering
+// export async function getServerSideProps(context) {
+//   const allPostsData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostsData
+//     }
+//   }
+// }
 
 export default function Home({ allPostsData }) {
   return (
