@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/layout"
 
-const FirstPost = () => {
+export default function FirstPost() {
   return (
     <Layout>
       <Head>
@@ -17,5 +17,3 @@ const FirstPost = () => {
     </Layout>
   )
 }
-
-export default FirstPost;
